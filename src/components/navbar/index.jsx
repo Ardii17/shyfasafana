@@ -33,8 +33,8 @@ const Navbar = () => {
     "Services",
     "Resume",
     "Skills",
-    "Works",
-    "Contact",
+    "Design",
+    "Certificates",
   ];
 
   return (
@@ -61,7 +61,7 @@ const Navbar = () => {
             <li key={link}>
               <a
                 href={`#${link.toLowerCase()}`}
-                className={`uppercase font-semibold text-sm transition-colors duration-300 ${
+                className={`uppercase font-bold text-sm transition-colors duration-300 ${
                   isScrolled
                     ? "text-gray-800 hover:text-pink-500"
                     : "text-white hover:text-gray-300"

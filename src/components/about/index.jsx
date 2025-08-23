@@ -66,7 +66,7 @@ const AboutMe = () => {
           {/* Kolom Tengah: Detail & Tombol */}
           <div className="col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-4">
-              <p className="font-serif text-3xl mt-6">Marshall Doe</p>
+              <p className="font-serif text-3xl mt-6">Shyfa Safana</p>
               <ul className="space-y-3 text-gray-700">
                 <li>
                   <strong className="w-24 inline-block">Birthday:</strong>{" "}

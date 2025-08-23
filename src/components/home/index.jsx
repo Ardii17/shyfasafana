@@ -36,12 +36,12 @@ const HomePage = () => {
 
         {/* Nama */}
         <h1 className="text-5xl md:text-7xl font-bold tracking-wider uppercase">
-          Marshall Doe
+          Shyfa Safana
         </h1>
 
         {/* Jabatan */}
         <p className="mt-4 text-lg md:text-xl font-light tracking-widest uppercase">
-          Designer + Developer
+          Designer + Kreator Produk
         </p>
 
         {/* Ikon Media Sosial */}
