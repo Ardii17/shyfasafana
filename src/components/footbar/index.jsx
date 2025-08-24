@@ -1,10 +1,9 @@
 import React from "react";
 import {
-  FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
-  FaGithub,
+  FaWhatsapp,
+  FaTiktok,
   FaArrowUp,
 } from "react-icons/fa";
 
@@ -26,13 +25,7 @@ const Footer = () => {
             href="#"
             className="hover:text-white transition-colors duration-300"
           >
-            <FaFacebookF size="1.5em" />
-          </a>
-          <a
-            href="#"
-            className="hover:text-white transition-colors duration-300"
-          >
-            <FaTwitter size="1.5em" />
+            <FaTiktok size="1.5em" />
           </a>
           <a
             href="#"
@@ -50,15 +43,15 @@ const Footer = () => {
             href="#"
             className="hover:text-white transition-colors duration-300"
           >
-            <FaGithub size="1.5em" />
+            <FaWhatsapp size="1.5em" />
           </a>
         </div>
 
         {/* Teks Copyright */}
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Marshall Doe. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Annisa Shyfa Safana. All Rights
+          Reserved.
         </p>
-        <p className="text-xs mt-2">Designed with React & Tailwind CSS</p>
       </div>
 
       {/* Tombol Back to Top */}

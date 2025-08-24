@@ -5,52 +5,58 @@ import "react-circular-progressbar/dist/styles.css"; // Wajib impor CSS-nya
 // Data untuk setiap skill
 const skillsData = [
   {
-    name: "HTML5/CSS3",
-    percentage: 87,
+    name: "Corel Draw",
+    percentage: 80,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Menguasai penggunaan Corel Draw untuk desain grafis, pembuatan pola, dan ilustrasi digital.",
   },
   {
-    name: "JavaScript",
+    name: "Ibis Paint X",
+    percentage: 70,
+    description:
+      "Mampu membuat ilustrasi digital dengan Ibis Paint X untuk kebutuhan kreatif dan fashion.",
+  },
+  {
+    name: "Microsoft Word",
+    percentage: 80,
+    description:
+      "Terampil menggunakan Microsoft Word untuk penulisan, penyusunan laporan, dan administrasi.",
+  },
+  {
+    name: "Fotografi",
     percentage: 75,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Memiliki kemampuan dalam fotografi, termasuk pengambilan gambar dan pengeditan dasar.",
   },
   {
-    name: "WordPress",
-    percentage: 83,
+    name: "Content Creator",
+    percentage: 65,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Berpengalaman dalam membuat konten digital untuk media sosial, termasuk foto, video, dan caption.",
   },
   {
-    name: "Joomla",
-    percentage: 69,
+    name: "Copywriting",
+    percentage: 70,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Mampu menulis teks promosi dan konten yang menarik untuk pemasaran dan branding.",
   },
   {
-    name: "Photoshop",
-    percentage: 100,
-    description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
-  },
-  {
-    name: "Illustrator",
-    percentage: 73,
-    description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
-  },
-  {
-    name: "InDesign",
+    name: "Ilustrasi Manual",
     percentage: 85,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Menguasai teknik ilustrasi manual seperti sketsa, menggambar bentuk, dan pewarnaan.",
   },
   {
-    name: "3D Max",
-    percentage: 55,
+    name: "Desain Produk Fashion",
+    percentage: 85,
     description:
-      "Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.",
+      "Mampu merancang produk fashion dengan memperhatikan tren, estetika, dan fungsi.",
+  },
+  {
+    name: "Perancang Busana",
+    percentage: 75,
+    description:
+      "Memiliki keterampilan dalam menjahit, menyulam, menganyam, hingga membatik untuk menghasilkan busana.",
   },
 ];
 

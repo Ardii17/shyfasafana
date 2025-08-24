@@ -3,65 +3,81 @@ import React from "react";
 // Data untuk pengalaman kerja (tidak ada perubahan di sini)
 const experiences = [
   {
-    role: "Senior Developer",
-    company: "Company Name",
-    period: "2012 - Current",
+    role: "Tim Desainer (Magang)",
+    company: "CV Sekain Sebaju (__sekain)",
+    period: "2024 – 2025",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Magang di subunit Teman Thrifty sebagai tim desainer produksi model pakaian. Belajar QC (quality control) sebelum produksi agar produk layak jual.",
     isRight: true,
   },
   {
-    role: "Junior Developer",
-    company: "Company Name",
-    period: "2010 - 2008",
+    role: "Departemen Media Sosial",
+    company: "Forum Organisasi Kuningan (FOK)",
+    period: "2020 – 2021",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Mengoperasikan media sosial Instagram untuk interaksi dengan pengikut, mengedit video, dan mengunggah foto kegiatan.",
     isRight: false,
   },
   {
-    role: "Senior UI Designer",
-    company: "Company Name",
-    period: "2008 - 2006",
+    role: "Departemen Wirausaha & Departemen Agama",
+    company: "Himpunan Mahasiswa (HIMA) Kriya Tekstil dan Fashion",
+    period: "2022 – 2024",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Di Dept. Wirausaha: mempromosikan produk perlengkapan kuliah. Di Dept. Agama: menjalankan program kajian, pengajian umum, dan acara buka bersama prodi.",
     isRight: true,
-    highlight: true,
   },
   {
-    role: "Junior UI Designer",
-    company: "Company Name",
-    period: "2006 - 2004",
+    role: "Ketua Departemen Media Sosial",
+    company: "UKM Fotografi Kampus",
+    period: "2021 – 2024",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Memimpin pengelolaan media sosial dan dokumentasi kegiatan UKM Fotografi.",
     isRight: false,
+  },
+  {
+    role: "Tim Logistik",
+    company: "Pameran Upangga Artista (TPB Kampus)",
+    period: "2022",
+    description:
+      "Menyelenggarakan pameran seni mata kuliah. Berperan sebagai kurator karya, menyiapkan logistik, dan memastikan acara berjalan lancar.",
+    isRight: true,
+  },
+  {
+    role: "Tim Konsumsi",
+    company: "Pameran Sefoka (Fotografi Fashion)",
+    period: "2023",
+    description:
+      "Menyediakan konsumsi untuk panitia, tamu, dan pengunjung pameran fotografi fashion bertema batik di Bandung Creative Hub.",
+    isRight: false,
+  },
+  {
+    role: "Tim Art Galeri",
+    company: "Artlinc Cultural Heritage Threads (Malaysia)",
+    period: "2024",
+    description:
+      "Berkolaborasi dengan mahasiswa ISBI & Universiti Malaysia Kelantan. Mengorganisir penempatan karya dan memantau kelancaran pameran bertema permainan tradisional.",
+    isRight: true,
   },
 ];
 
 // Data untuk pendidikan (tidak ada perubahan di sini)
 const education = [
   {
-    degree: "Masters Degree",
-    university: "University Name",
-    period: "2012 - 2010",
+    degree: "Madrasah Aliyah (MIPA)",
+    university: "Pembangunan Al Muawanah, Kab. Kuningan, Jawa Barat",
+    period: "2018 – 2021",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Mengambil jurusan MIPA di Madrasah Aliyah Pembangunan Al Muawanah. Menjadi dasar akademik sebelum melanjutkan ke perguruan tinggi.",
     isRight: true,
   },
   {
-    degree: "Bachelors Degree",
-    university: "University Name",
-    period: "2008 - 2005",
+    degree: "Bachelor's Degree in Kriya Tekstil dan Fashion",
+    university:
+      "Universitas Muhammadiyah Bandung, Fakultas Sosial dan Humaniora",
+    period: "2021 – 2025",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Mempelajari desain, kriya tekstil, dan fashion. Mengikuti berbagai kegiatan kampus seperti HIMA, UKM Fotografi, dan pameran seni.",
     isRight: false,
-  },
-  {
-    degree: "Graduation",
-    university: "College Name",
-    period: "2005 - 2003",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
-    isRight: true,
   },
 ];
 

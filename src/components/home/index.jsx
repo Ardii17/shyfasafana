@@ -1,17 +1,16 @@
 import React from "react";
 import {
-  FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
-  FaGithub,
+  FaWhatsapp,
+  FaTiktok,
   FaChevronDown,
 } from "react-icons/fa";
 
 const HomePage = () => {
   // URL gambar dummy untuk latar belakang (dari Unsplash)
   const dummyBackgroundImage =
-    "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+    "https://images.pexels.com/photos/7139828/pexels-photo-7139828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
   // URL logo dummy (dari Logoipsum)
   const dummyLogo =
@@ -19,6 +18,7 @@ const HomePage = () => {
 
   return (
     <div
+      id="home"
       className="relative h-screen w-full flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${dummyBackgroundImage})` }}
     >
@@ -36,12 +36,13 @@ const HomePage = () => {
 
         {/* Nama */}
         <h1 className="text-5xl md:text-7xl font-bold tracking-wider uppercase">
-          Shyfa Safana
+          Annisa Shyfa Safana
         </h1>
 
         {/* Jabatan */}
         <p className="mt-4 text-lg md:text-xl font-light tracking-widest uppercase">
-          Designer + Kreator Produk
+          Desainer Mode + Perancang Busana + Desainer Kriya + Ilustrasi Fashion
+          + Fotografer
         </p>
 
         {/* Ikon Media Sosial */}
@@ -50,13 +51,13 @@ const HomePage = () => {
             href="#"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
-            <FaFacebookF />
+            <FaWhatsapp />
           </a>
           <a
             href="#"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
-            <FaTwitter />
+            <FaTiktok />
           </a>
           <a
             href="#"
@@ -69,12 +70,6 @@ const HomePage = () => {
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
             <FaLinkedinIn />
-          </a>
-          <a
-            href="#"
-            className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            <FaGithub />
           </a>
         </div>
       </div>

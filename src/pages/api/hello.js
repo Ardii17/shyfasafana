@@ -3,3 +3,5 @@
 export default function handler(req, res) {
   res.status(200).json({ name: "John Doe" });
 }
+
+//ini adalah file api yang digunakan untuk testing saja, tidak ada

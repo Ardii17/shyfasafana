@@ -41,15 +41,14 @@ const AboutMe = () => {
         {/* Konten About Me */}
         <div className="text-gray-600 text-center mb-12 max-w-4xl mx-auto">
           <p className="mb-4">
-            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-            ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-            per inceptos himenaeos.
-          </p>
-          <p>
-            Vivamus in erat ut urna cursus vestibulum. Fusce commodo aliquam
-            arcu. Nam commodo suscipit quam. Nunc nonummy metus.
+            Perkenalan Diri Singkat : Perkenalkan, nama saya Annisa Shyfa
+            Safana. Saya merupakan mahasiswa program studi Kriya Tekstil dan
+            Fashion yang saat ini telah menyelesaikan Pendidikan di Universitas
+            Muhammadiyah Bandung dengan gelar Sarjana Seni (S,Sn.) serta IPK
+            3,64. Saya dapat bekerja sama dalam tim, beradaptasi dengan baik,
+            menyelesaikan tanggung jawab dengan baik, dapat dipercaya, jujur,
+            dan konsisten. Saya memiliki keterampilan untuk menggambar, melukis,
+            memotret, dan menganalisa sesuatu yang baru.
           </p>
         </div>
 
@@ -66,27 +65,28 @@ const AboutMe = () => {
           {/* Kolom Tengah: Detail & Tombol */}
           <div className="col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-4">
-              <p className="font-serif text-3xl mt-6">Shyfa Safana</p>
+              <p className="font-serif text-3xl mt-6">Annisa Shyfa Safana</p>
               <ul className="space-y-3 text-gray-700">
                 <li>
                   <strong className="w-24 inline-block">Birthday:</strong>{" "}
-                  08-08-1992
+                  Balikpapan, 6 Febuari 2003
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Phone:</strong> +88 9876
-                  5432
+                  <strong className="w-24 inline-block">Phone:</strong>{" "}
+                  +6281122864888
                 </li>
                 <li>
                   <strong className="w-24 inline-block">Email:</strong>{" "}
-                  hello@marshallsite.com
+                  shyfa.safana@gmail.com
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Website:</strong>{" "}
-                  www.marshallsite.com
+                  <strong className="w-24 inline-block">Jenis Kelamin:</strong>{" "}
+                  perempuan
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Address:</strong> 123
-                  King Street, Melbourne VIC 3000, Australia
+                  <strong className="w-24 inline-block">Address:</strong> Perum
+                  Korpri Tapis Blok A8 no. 15, Kec. Tanah Grogot, Kab. Paser,
+                  Kalimantan Timur
                 </li>
               </ul>
               <button className="self-start mt-6 bg-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-600 transition-colors duration-300 flex items-center space-x-2">

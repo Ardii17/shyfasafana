@@ -1,52 +1,48 @@
 import React from "react";
 import {
-  FaLeaf,
-  FaFlask,
+  FaPencilRuler,
   FaPaintBrush,
-  FaBullhorn,
-  FaChartBar,
-  FaAnchor,
+  FaLightbulb,
+  FaCamera,
+  FaTshirt,
+  FaShareAlt,
 } from "react-icons/fa";
 
-// Data untuk setiap layanan
 const servicesData = [
   {
-    icon: <FaLeaf />,
+    icon: <FaPencilRuler />,
     title: "Designing",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
-  },
-  {
-    icon: <FaFlask />,
-    title: "Developing",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+    description: "Mendesain dan merancang sebuah produk fashion.",
   },
   {
     icon: <FaPaintBrush />,
-    title: "Branding",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+    title: "Illustrating",
+    description: "Ilustrasi produk dengan manual, Corel Draw, Ibis Paint X.",
   },
   {
-    icon: <FaBullhorn />,
-    title: "Marketing",
-    description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+    icon: <FaLightbulb />,
+    title: "Exploring",
+    description: "Mengeksplorasi hal – hal terbaru.",
   },
   {
-    icon: <FaChartBar />,
-    title: "Analytics",
+    icon: <FaCamera />,
+    title: "Photography",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Memotret (baik dengan kamera atau gawai) dan mengedit foto (dengan aplikasi gawai).",
   },
   {
-    icon: <FaAnchor />,
-    title: "Support",
+    icon: <FaTshirt />,
+    title: "Fashion Crafting",
     description:
-      "Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.",
+      "Perancang Busana (Menjahit, menyulam, menganyam, dan membatik).",
+  },
+  {
+    icon: <FaShareAlt />,
+    title: "Social Media",
+    description: "Operator Media Sosial.",
   },
 ];
+
 
 const MyServices = () => {
   return (
