@@ -22,28 +22,28 @@ const Footer = () => {
         {/* Ikon Media Sosial */}
         <div className="flex justify-center space-x-6 mb-6">
           <a
-            href="#"
+            href="https://wa.me/6281122864888"
+            className="hover:text-white transition-colors duration-300"
+          >
+            <FaWhatsapp size="1.5em" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@shyfasafana6"
             className="hover:text-white transition-colors duration-300"
           >
             <FaTiktok size="1.5em" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/shyfasfna?igsh=MWswcGVkcjh1bXpneQ=="
             className="hover:text-white transition-colors duration-300"
           >
             <FaInstagram size="1.5em" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/shyfa-safana-5630b72ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             className="hover:text-white transition-colors duration-300"
           >
             <FaLinkedinIn size="1.5em" />
-          </a>
-          <a
-            href="#"
-            className="hover:text-white transition-colors duration-300"
-          >
-            <FaWhatsapp size="1.5em" />
           </a>
         </div>
 

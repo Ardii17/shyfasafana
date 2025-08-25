@@ -48,25 +48,29 @@ const HomePage = () => {
         {/* Ikon Media Sosial */}
         <div className="flex space-x-4 mt-8">
           <a
-            href="#"
+            href="https://wa.me/6281122864888"
+            target="_blank"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
             <FaWhatsapp />
           </a>
           <a
-            href="#"
+            href="https://www.tiktok.com/@shyfasafana6"
+            target="_blank"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
             <FaTiktok />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/shyfasfna?igsh=MWswcGVkcjh1bXpneQ=="
+            target="_blank"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/shyfa-safana-5630b72ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
             className="p-2 border-2 border-gray-400 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
             <FaLinkedinIn />

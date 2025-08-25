@@ -1,14 +1,11 @@
 import React from "react";
 import {
   FaDownload,
-  FaGamepad,
-  FaFilm,
-  FaMusic,
-  FaCoffee,
-  FaBriefcase,
-  FaCar,
-  FaApple,
-  FaMoneyBillWave,
+  FaCamera,
+  FaPlane,
+  FaDumbbell,
+  FaFlask,
+  FaPalette,
 } from "react-icons/fa";
 
 // URL gambar profil dummy
@@ -17,14 +14,11 @@ const profileImage =
 
 const AboutMe = () => {
   const hobbies = [
-    { icon: <FaGamepad />, name: "Games" },
-    { icon: <FaFilm />, name: "Cinema" },
-    { icon: <FaMusic />, name: "Music" },
-    { icon: <FaCoffee />, name: "Coffee" },
-    { icon: <FaBriefcase />, name: "Travel" },
-    { icon: <FaCar />, name: "Cars" },
-    { icon: <FaApple />, name: "Mac OS" },
-    { icon: <FaMoneyBillWave />, name: "Money" },
+    { icon: <FaPlane />, name: "Traveling" },
+    { icon: <FaCamera />, name: "Photography" },
+    { icon: <FaDumbbell />, name: "Sports" },
+    { icon: <FaFlask />, name: "Experiment" },
+    { icon: <FaPalette />, name: "Design" },
   ];
 
   return (
@@ -68,23 +62,23 @@ const AboutMe = () => {
               <p className="font-serif text-3xl mt-6">Annisa Shyfa Safana</p>
               <ul className="space-y-3 text-gray-700">
                 <li>
-                  <strong className="w-24 inline-block">Birthday:</strong>{" "}
-                  Balikpapan, 6 Febuari 2003
+                  <strong className="w-24 inline-block">Birthday</strong>
+                  : Balikpapan, 6 Febuari 2003
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Phone:</strong>{" "}
-                  +6281122864888
+                  <strong className="w-24 inline-block">Phone</strong>{" "}
+                  : +6281122864888
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Email:</strong>{" "}
-                  shyfa.safana@gmail.com
+                  <strong className="w-24 inline-block">Email</strong>{" "}
+                  : shyfa.safana@gmail.com
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Jenis Kelamin:</strong>{" "}
-                  perempuan
+                  <strong className="w-24 inline-block">Jenis Kelamin</strong>{" "}
+                  : Perempuan
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Address:</strong> Perum
+                  <strong className="w-24 inline-block">Alamat</strong>: Perum
                   Korpri Tapis Blok A8 no. 15, Kec. Tanah Grogot, Kab. Paser,
                   Kalimantan Timur
                 </li>
