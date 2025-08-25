@@ -1,6 +1,6 @@
 import React from "react";
 
-// Data untuk pengalaman kerja (tidak ada perubahan di sini)
+// Data untuk pengalaman kerja (tidak ada perubahan)
 const experiences = [
   {
     role: "Tim Desainer (Magang)",
@@ -60,7 +60,7 @@ const experiences = [
   },
 ];
 
-// Data untuk pendidikan (tidak ada perubahan di sini)
+// Data untuk pendidikan (tidak ada perubahan)
 const education = [
   {
     degree: "Madrasah Aliyah (MIPA)",
@@ -81,41 +81,35 @@ const education = [
   },
 ];
 
-// ===== Komponen TimelineItem yang sudah diperbaiki =====
+// ===== Komponen TimelineItem yang sudah diperbaiki total =====
 const TimelineItem = ({ data }) => (
-  // Logika baru: Gunakan flex-row-reverse untuk membalik item kiri
   <div
-    className={`mb-8 flex justify-between items-center w-full ${
-      !data.isRight ? "flex-row-reverse" : ""
+    // Di mobile: item selalu mulai dari kiri. Di desktop: kiri-kanan
+    className={`mb-8 flex justify-start md:justify-between items-center w-full ${
+      !data.isRight ? "md:flex-row-reverse" : ""
     }`}
   >
-    {/* Spacer kosong. Posisinya akan ditukar oleh flex-row-reverse */}
-    <div className="w-5/12"></div>
+    {/* Spacer kosong untuk desktop, disembunyikan di mobile */}
+    <div className="hidden md:block w-5/12"></div>
 
-    {/* Lingkaran di Tengah */}
+    {/* Lingkaran di Tengah. Diberi margin negatif agar menempel di garis */}
     <div className="z-10 flex items-center bg-gray-300 w-6 h-6 rounded-full shadow-xl">
-      <div
-        className={`mx-auto w-3 h-3 rounded-full ${
-          data.highlight ? "bg-pink-500" : "bg-gray-500"
-        }`}
-      ></div>
+      <div className="mx-auto w-3 h-3 rounded-full bg-gray-500"></div>
     </div>
 
-    {/* Konten Card */}
-    <div className="w-5/12">
-      <div
-        className={`p-4 rounded-lg shadow-lg ${
-          data.highlight ? "bg-white" : "bg-gray-50"
-        } ${!data.isRight ? "text-right" : "text-left"}`}
-      >
-        <h3 className="text-xl font-bold text-gray-800">
-          {data.role || data.degree}
-        </h3>
-        <p className="text-sm font-semibold text-gray-600">
-          {data.company || data.university} • {data.period}
-        </p>
-        <p className="text-sm text-gray-500 mt-2">{data.description}</p>
-      </div>
+    {/* Konten Card. Diberi margin kiri di mobile & flex-1 agar lebarnya pas */}
+    <div
+      className={`ml-4 md:ml-0 flex-1 md:w-5/12 p-4 rounded-lg shadow-lg ${
+        data.highlight ? "bg-white" : "bg-gray-50"
+      } ${!data.isRight ? "md:text-right" : "md:text-left"}`}
+    >
+      <h3 className="text-xl font-bold text-gray-800">
+        {data.role || data.degree}
+      </h3>
+      <p className="text-sm font-semibold text-gray-600">
+        {data.company || data.university} • {data.period}
+      </p>
+      <p className="text-sm text-gray-500 mt-2">{data.description}</p>
     </div>
   </div>
 );
@@ -137,9 +131,15 @@ const Resume = () => {
               Experiences
             </h3>
           </div>
-          <div className="relative wrap overflow-hidden p-10 h-full">
+          <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
+            {/* Garis vertikal yang posisinya sudah responsif */}
             <div
-              className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+              className="absolute border-2-2 border-opacity-20 border-gray-400 h-full border"
+              // Di mobile: garis di kiri. Di desktop: garis di tengah
+              style={{ left: "1.5rem" }}
+            ></div>
+            <div
+              className="hidden md:block absolute border-2-2 border-opacity-20 border-gray-400 h-full border"
               style={{ left: "50%" }}
             ></div>
             {experiences.map((exp, index) => (
@@ -155,9 +155,14 @@ const Resume = () => {
               Education
             </h3>
           </div>
-          <div className="relative wrap overflow-hidden p-10 h-full">
+          <div className="relative wrap overflow-hidden p-4 md:p-10 h-full">
+            {/* Garis vertikal yang posisinya sudah responsif */}
             <div
-              className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+              className="absolute border-2-2 border-opacity-20 border-gray-400 h-full border"
+              style={{ left: "1.5rem" }}
+            ></div>
+            <div
+              className="hidden md:block absolute border-2-2 border-opacity-20 border-gray-400 h-full border"
               style={{ left: "50%" }}
             ></div>
             {education.map((edu, index) => (
