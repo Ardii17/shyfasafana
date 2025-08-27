@@ -8,10 +8,6 @@ import {
 } from "react-icons/fa";
 
 const HomePage = () => {
-  // URL gambar dummy untuk latar belakang (dari Unsplash)
-  const dummyBackgroundImage =
-    "https://images.pexels.com/photos/7139828/pexels-photo-7139828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-
   // URL logo dummy (dari Logoipsum)
   const dummyLogo =
     "data:image/svg+xml,%3csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='50' cy='50' r='50' fill='white'/%3e%3cpath d='M25 70L50 30L75 70L62.5 50L50 70L37.5 50L25 70Z' fill='%23EF4444'/%3e%3c/svg%3e";
@@ -20,7 +16,7 @@ const HomePage = () => {
     <div
       id="home"
       className="relative h-screen w-full flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${dummyBackgroundImage})` }}
+      style={{ backgroundImage: `url('/images/background.jpg')` }}
     >
       {/* Overlay Gelap */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
