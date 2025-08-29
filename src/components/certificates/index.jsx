@@ -1,34 +1,86 @@
-import React from "react";
-// Ikon meta info sudah dihapus karena tidak digunakan lagi
+import React, { useState } from "react";
 
 // ===== DATA DENGAN SUBTITLE BARU =====
-// Saya menggabungkan issuer, date, dan category menjadi satu field 'subtitle'
 const certificatesData = [
   {
-    title: "Certified React Developer",
-    subtitle: "Issued by Coursera • Web Development",
-    date: "April 2024",
-    image: "https://picsum.photos/seed/cert1/600/400",
+    title: "Sertifikat Kompetensi Pembatik Tulis",
+    subtitle:
+      "Issued by Badan Nasional Sertifikasi Profesi (BNSP) • Industri Batik",
+    date: "Juni 2024",
+    image: "./images/certificates/Sertifikat BNSP.jpeg",
   },
   {
-    title: "Tailwind CSS Mastery",
-    subtitle: "Issued by Udemy • Frontend",
-    date: "Januari 2024",
-    image: "https://picsum.photos/seed/cert2/600/400",
+    title: "Asian International Art Culture Exchange Exhibition",
+    subtitle: "Issued by Universiti Malaysia Kelantan (UMK) • Pameran Seni",
+    date: "Desember 2024",
+    image: "./images/certificates/Sertifikat pameran malaysia.jpg",
   },
   {
-    title: "Advanced JavaScript",
-    subtitle: "Issued by Dicoding • Programming",
-    date: "Oktober 2023",
-    image: "https://picsum.photos/seed/cert3/600/400",
+    title: "Sertifikat Penghargaan: Pink Party Curves 2024",
+    subtitle: "Issued by Curves Indonesia • Breast Cancer Awareness",
+    date: "2024",
+    image: "./images/certificates/Sertifikat penghargaan.jpeg",
+  },
+  {
+    title: "Intensifikasi Kemampuan Baca Tulis Al-Qur'an",
+    subtitle: "Issued by Kementerian Agama Kuningan • Pendidikan Agama",
+    date: "Mei 2021",
+    image: "./images/certificates/Sertifikat MA.jpeg",
+  },
+  {
+    title: "Ijazah Madrasah Aliyah (Peminatan MIPA)",
+    subtitle: "Issued by Kementerian Agama RI • Pendidikan Formal",
+    date: "Mei 2021",
+    image: "./images/certificates/Ijazah MA.jpeg",
+  },
+  {
+    title: "Sertifikat Kegiatan Pemimpin Satuan (DIANPINSAT)",
+    subtitle: "Issued by Kwartir Ranting Pramuka Mandirancan • Kepramukaan",
+    date: "Februari 2020",
+    image: "./images/certificates/Sertifikat Dianpinsat.jpeg",
+  },
+  {
+    title: "Seminar Nasional: Winning in Industry 4.0",
+    subtitle: "Issued by Wirausaha Muda Nusantara (WIMNUS) • Seminar",
+    date: "November 2019",
+    image: "./images/certificates/Sertifikat nasional.jpeg",
+  },
+  {
+    title: "Surat Keterangan Penegak Laksana",
+    subtitle: "Issued by Gugus Depan Pramuka 14037/14038 • Kepramukaan",
+    date: "September 2019",
+    image: "./images/certificates/Sertifikat Laksana Pramuka.jpeg",
+  },
+  {
+    title: "Fun Brewing Certificate",
+    subtitle: "Issued by PT Maxx Coffee Prima • Pelatihan Kopi",
+    date: "", // Tidak ada tanggal yang tertera di sertifikat
+    image: "./images/certificates/Fun Breawing Certificate.jpeg",
   },
 ];
 
 const Certificates = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  // 1. Tambahkan state untuk mengelola modal
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  const certificatesToShow = showAll
+    ? certificatesData
+    : certificatesData.slice(0, 3);
+
+  // 2. Buat fungsi untuk membuka dan menutup modal
+  const openModal = (cert) => {
+    setSelectedCert(cert);
+  };
+
+  const closeModal = () => {
+    setSelectedCert(null);
+  };
+
   return (
     <section id="certificates" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        {/* Judul Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 uppercase">
             Certificates
@@ -36,45 +88,79 @@ const Certificates = () => {
           <div className="w-24 h-1 bg-pink-500 mx-auto mt-4"></div>
         </div>
 
-        {/* Grid untuk Card Sertifikat */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificatesData.map((cert, index) => (
+          {certificatesToShow.map((cert, index) => (
+            // 3. Buat kartu bisa diklik dan tambahkan efek hover
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200"
+              className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 cursor-pointer transform hover:scale-105 hover:shadow-xl transition-transform duration-300"
+              onClick={() => openModal(cert)} // Panggil fungsi openModal saat diklik
             >
-              {/* Gambar Sertifikat */}
               <img
                 src={cert.image}
                 alt={cert.title}
                 className="w-full h-48 object-cover"
               />
-
               <div className="p-6">
-                {/* Judul Sertifikat */}
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 truncate">
                   {cert.title}
                 </h3>
-
-                {/* ===== BAGIAN YANG DIUBAH ===== */}
-                {/* Meta Info diganti dengan Subtitle */}
-                <p className="text-sm font-semibold text-gray-600 mb-4">
+                <p className="text-sm font-semibold text-gray-600">
                   {cert.subtitle}
                 </p>
-
-                {/* Deskripsi (opsional, jika diperlukan) */}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Tombol View All */}
-        <div className="text-center mt-16">
-          <button className="bg-gray-800 text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-700 transition-colors duration-300">
-            VIEW ALL CERTIFICATES
-          </button>
-        </div>
+        {certificatesData.length > 3 && !showAll && (
+          <div className="text-center mt-16">
+            <button
+              onClick={() => setShowAll(true)}
+              className="bg-gray-800 text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              VIEW ALL CERTIFICATES
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* 4. Tambahkan JSX untuk komponen Modal */}
+      {selectedCert && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          onClick={closeModal} // Tutup modal saat area gelap di luar diklik
+        >
+          <div
+            className="bg-white p-5 rounded-lg shadow-xl max-w-3xl w-11/12 relative animate-fade-in-up"
+            onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat konten di dalam diklik
+          >
+            {/* Tombol Close */}
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+            >
+              &times;
+            </button>
+
+            {/* Konten Modal */}
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              {selectedCert.title}
+            </h3>
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="w-full h-auto object-contain max-h-[70vh] rounded-md mb-4"
+            />
+            <p className="text-md text-gray-700">{selectedCert.subtitle}</p>
+            {selectedCert.date && (
+              <p className="text-sm text-gray-500 mt-1">
+                Date: {selectedCert.date}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
