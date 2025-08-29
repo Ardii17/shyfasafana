@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// ===== DATA DENGAN SUBTITLE BARU =====
+// (Data array 'certificatesData' tidak berubah, tetap sama)
 const certificatesData = [
   {
     title: "Sertifikat Kompetensi Pembatik Tulis",
@@ -61,15 +61,12 @@ const certificatesData = [
 
 const Certificates = () => {
   const [showAll, setShowAll] = useState(false);
-
-  // 1. Tambahkan state untuk mengelola modal
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certificatesToShow = showAll
     ? certificatesData
     : certificatesData.slice(0, 3);
 
-  // 2. Buat fungsi untuk membuka dan menutup modal
   const openModal = (cert) => {
     setSelectedCert(cert);
   };
@@ -88,21 +85,25 @@ const Certificates = () => {
           <div className="w-24 h-1 bg-pink-500 mx-auto mt-4"></div>
         </div>
 
+        {/* Pada div grid, tambahkan 'items-stretch' jika diperlukan, tapi fokus utamanya ada di dalam card */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificatesToShow.map((cert, index) => (
-            // 3. Buat kartu bisa diklik dan tambahkan efek hover
+            // ===== PERUBAHAN DI SINI =====
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 cursor-pointer transform hover:scale-105 hover:shadow-xl transition-transform duration-300"
-              onClick={() => openModal(cert)} // Panggil fungsi openModal saat diklik
+              // 1. Tambahkan 'flex' dan 'flex-col' untuk mengaktifkan layout flexbox
+              className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 cursor-pointer transform hover:scale-105 hover:shadow-xl transition-transform duration-300 flex flex-col"
+              onClick={() => openModal(cert)}
             >
               <img
                 src={cert.image}
                 alt={cert.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2 truncate">
+              {/* 2. Tambahkan 'flex-grow' agar div ini mengisi sisa ruang vertikal */}
+              <div className="p-6 flex flex-col flex-grow">
+                {/* 3. Tambahkan 'flex-grow' pada judul agar mendorong subtitle ke bawah */}
+                <h3 className="text-xl font-bold text-gray-800 mb-2 flex-grow">
                   {cert.title}
                 </h3>
                 <p className="text-sm font-semibold text-gray-600">
@@ -125,25 +126,22 @@ const Certificates = () => {
         )}
       </div>
 
-      {/* 4. Tambahkan JSX untuk komponen Modal */}
+      {/* Modal tidak perlu diubah */}
       {selectedCert && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-          onClick={closeModal} // Tutup modal saat area gelap di luar diklik
+          onClick={closeModal}
         >
           <div
             className="bg-white p-5 rounded-lg shadow-xl max-w-3xl w-11/12 relative animate-fade-in-up"
-            onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat konten di dalam diklik
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Tombol Close */}
             <button
               onClick={closeModal}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl font-bold"
             >
               &times;
             </button>
-
-            {/* Konten Modal */}
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               {selectedCert.title}
             </h3>

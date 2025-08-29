@@ -73,7 +73,7 @@ const education = [
   {
     degree: "Bachelor's Degree in Kriya Tekstil dan Fashion",
     university:
-      "Universitas Muhammadiyah Bandung, Fakultas Sosial dan Humaniora",
+      "Universitas Muhamadiyah Bandung, Fakultas Sosial dan Humaniora",
     period: "2021 – 2025",
     description:
       "Mempelajari desain, kriya tekstil, dan fashion. Mengikuti berbagai kegiatan kampus seperti HIMA, UKM Fotografi, dan pameran seni.",
@@ -81,48 +81,47 @@ const education = [
   },
 ];
 
-// ===== Komponen TimelineItem yang sudah diperbaiki untuk Mobile =====
-const TimelineItem = ({ data }) => (
-  // Logika baru: Di layar mobile (md:), item akan ditumpuk, di desktop (md:) akan kiri-kanan
-  <div
-    className={`mb-8 flex md:justify-between md:items-center w-full ${
-      !data.isRight ? "md:flex-row-reverse" : ""
-    }`}
-  >
-    {/* Spacer kosong untuk desktop, disembunyikan di mobile */}
-    <div className="hidden md:block w-5/12"></div>
+// ===== 1. PERUBAHAN UTAMA PADA KOMPONEN TIMELINEITEM =====
+const TimelineItem = ({ data }) => {
+  const { isRight } = data;
 
-    {/* Lingkaran di Tengah (tetap sama) */}
-    <div className="z-10 flex items-center bg-gray-300 w-6 h-6 rounded-full shadow-xl">
-      <div
-        className={`mx-auto w-3 h-3 rounded-full ${
-          data.highlight ? "bg-pink-500" : "bg-gray-500"
-        }`}
-      ></div>
-    </div>
+  // Tentukan kelas untuk posisi card di desktop
+  const desktopClasses = isRight
+    ? "md:ml-auto md:pl-16" // Card di kanan
+    : "md:mr-auto md:pr-16 md:text-right"; // Card di kiri
 
-    {/* Konten Card (lebar diubah untuk mobile) */}
-    <div className="w-full md:w-5/12">
+  return (
+    // Container untuk setiap item (card + dot)
+    <div className="relative">
+      {/* Lingkaran (Dot) di Garis Timeline */}
+      <div className="absolute z-10 flex items-center justify-center w-6 h-6 bg-gray-300 rounded-full top-0 left-2 md:left-1/2 md:-translate-x-1/2">
+        <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+      </div>
+
+      {/* Konten Card */}
       <div
-        className={`p-4 rounded-lg shadow-lg ${
-          data.highlight ? "bg-white" : "bg-gray-50"
-        } ${!data.isRight ? "md:text-right" : "md:text-left"}`}
+        // Layout Mobile: selalu punya padding kiri untuk memberi ruang pada garis
+        // Layout Desktop: lebar 50% dan posisi diatur oleh desktopClasses
+        className={`w-full pl-12 pb-8 md:w-1/2 md:p-0 ${desktopClasses}`}
       >
-        <h3 className="text-xl font-bold text-gray-800">
-          {data.role || data.degree}
-        </h3>
-        <p className="text-sm font-semibold text-gray-600">
-          {data.company || data.university} • {data.period}
-        </p>
-        <p className="text-sm text-gray-500 mt-2">{data.description}</p>
+        <div className="p-4 bg-white rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold text-gray-800">
+            {data.role || data.degree}
+          </h3>
+          <p className="text-sm font-semibold text-gray-600">
+            {data.company || data.university} • {data.period}
+          </p>
+          <p className="text-sm text-gray-500 mt-2">{data.description}</p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
+// ===== 2. PERUBAHAN KECIL PADA KOMPONEN RESUME =====
 const Resume = () => {
   return (
-    <section id="resume" className="py-20 bg-white">
+    <section id="resume" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Judul Utama */}
         <div className="text-center mb-16">
@@ -137,10 +136,12 @@ const Resume = () => {
               Experiences
             </h3>
           </div>
-          <div className="relative wrap overflow-hidden p-10 h-full">
+          {/* Wrapper untuk timeline dengan garis vertikal */}
+          <div className="relative">
+            {/* Garis Vertikal yang Responsif */}
             <div
-              className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-              style={{ left: "50%" }}
+              className="absolute w-0.5 bg-gray-300 h-full top-0 left-5 md:left-1/2 md:-translate-x-1/2"
+              aria-hidden="true"
             ></div>
             {experiences.map((exp, index) => (
               <TimelineItem data={exp} key={index} />
@@ -155,10 +156,12 @@ const Resume = () => {
               Education
             </h3>
           </div>
-          <div className="relative wrap overflow-hidden p-10 h-full">
+          {/* Wrapper untuk timeline dengan garis vertikal */}
+          <div className="relative">
+            {/* Garis Vertikal yang Responsif */}
             <div
-              className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-              style={{ left: "50%" }}
+              className="absolute w-0.5 bg-gray-300 h-full top-0 left-5 md:left-1/2 md:-translate-x-1/2"
+              aria-hidden="true"
             ></div>
             {education.map((edu, index) => (
               <TimelineItem data={edu} key={index} />
