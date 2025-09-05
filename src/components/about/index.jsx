@@ -9,8 +9,7 @@ import {
 } from "react-icons/fa";
 
 // URL gambar profil dummy
-const profileImage =
-  "/images/me.jpeg";  
+const profileImage = "/images/me.jpeg";
 
 const AboutMe = () => {
   const hobbies = [
@@ -62,20 +61,20 @@ const AboutMe = () => {
               <p className="font-serif text-3xl mt-6">Annisa Shyfa Safana</p>
               <ul className="space-y-3 text-gray-700">
                 <li>
-                  <strong className="w-24 inline-block">Birthday</strong>
-                  : Balikpapan, 6 Febuari 2003
+                  <strong className="w-24 inline-block">Birthday</strong>:
+                  Balikpapan, 6 Febuari 2003
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Phone</strong>{" "}
-                  : +6281122864888
+                  <strong className="w-24 inline-block">Phone</strong> :
+                  +6281122864888
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Email</strong>{" "}
-                  : shyfa.safana@gmail.com
+                  <strong className="w-24 inline-block">Email</strong> :
+                  shyfa.safana@gmail.com
                 </li>
                 <li>
-                  <strong className="w-24 inline-block">Jenis Kelamin</strong>{" "}
-                  : Perempuan
+                  <strong className="w-24 inline-block">Jenis Kelamin</strong> :
+                  Perempuan
                 </li>
                 <li>
                   <strong className="w-24 inline-block">Alamat</strong>: Perum
@@ -83,7 +82,10 @@ const AboutMe = () => {
                   Kalimantan Timur
                 </li>
               </ul>
-              <button className="self-start mt-6 bg-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-600 transition-colors duration-300 flex items-center space-x-2">
+              <button
+                onClick={() => window.open("./file/cv_shyfa.pdf")}
+                className="self-start mt-6 bg-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-600 transition-colors duration-300 flex items-center space-x-2"
+              >
                 <FaDownload />
                 <span>DOWNLOAD CV</span>
               </button>

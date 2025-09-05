@@ -4,7 +4,7 @@ import { FaPlus, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 // Kategori sekarang menjadi sumber utama untuk memanggil API
 const categories = [
   "Ilustrasi Fashion",
-  "Analisis Tren",
+  "Analisis Tren Fashion",
   "Fotografi",
   "Hasil Karya Kriya",
   "Design Digital",
