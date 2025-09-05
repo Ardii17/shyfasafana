@@ -1,18 +1,32 @@
 import React from "react";
 import CountUp from "react-countup";
+import {
+  FaPaintBrush,
+  FaBriefcase,
+  FaPencilRuler,
+  FaUsers,
+  FaTrophy,
+  FaCamera,
+  FaPalette,
+  FaCertificate,
+} from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
-import { FaCoffee, FaBriefcase, FaUsers, FaTrophy } from "react-icons/fa";
 
 // URL gambar latar dummy yang relevan
 const backgroundImage =
   "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
 // Data untuk setiap milestone
+
 const milestoneData = [
-  { icon: <FaCoffee />, count: 3413, label: "Cups of Coffee" },
-  { icon: <FaBriefcase />, count: 559, label: "Successful Projects" },
-  { icon: <FaUsers />, count: 212, label: "Happy Clients" },
-  { icon: <FaTrophy />, count: 99, label: "Awards Won" },
+  { icon: <FaPaintBrush />, count: 38, label: "Design Digital" }, // ikon desain
+  { icon: <FaBriefcase />, count: 22, label: "Analisis Tren Fashion" }, // ikon kerja/analisis
+  { icon: <FaPencilRuler />, count: 16, label: "Design Manual" }, // ikon manual/alat
+  { icon: <FaUsers />, count: 23, label: "Hasil Karya Kriya" }, // ikon komunitas
+  { icon: <FaTrophy />, count: 21, label: "Pengalaman" }, // ikon prestasi
+  { icon: <FaCamera />, count: 15, label: "Fotografi" }, // ikon kamera
+  { icon: <FaPalette />, count: 48, label: "Ilustrasi Fashion" }, // ikon palet warna
+  { icon: <FaCertificate />, count: 9, label: "Sertifikat" }, // ikon sertifikat
 ];
 
 const Milestones = () => {

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const svgLogo =
-  "data:image/svg+xml,%3csvg width='100' height='100' viewBox='0 0 100 100' fill='green' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='50' cy='50' r='50' fill='white'/%3e%3cpath d='M25 70L50 30L75 70L62.5 50L50 70L37.5 50L25 70Z' fill='%23EF4444'/%3e%3c/svg%3e";
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -70,13 +67,13 @@ const Navbar = () => {
           <div className="flex items-center">
             {/* Pastikan ada elemen dengan id="home" di halaman Anda */}
             <a href="#home" onClick={(e) => handleScrollTo(e, "home")}>
-              <img
-                src={svgLogo}
-                alt="Logo"
-                className={`w-12 h-12 transition-all duration-300 ${
-                  isScrolled ? "w-10 h-10" : "w-12 h-12"
+              <p
+                className={`uppercase font-bold text-2xl transition-colors duration-300 ${
+                  isScrolled ? "text-gray-800" : "text-white"
                 }`}
-              />
+              >
+                Shyfa's porto
+              </p>
             </a>
           </div>
 

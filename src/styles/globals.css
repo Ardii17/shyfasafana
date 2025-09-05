@@ -4,3 +4,19 @@ html,
 body {
   overflow-x: hidden;
 }
+
+@font-face {
+  font-family: "The Seasons";
+  src: url("/fonts/The_Seasons/Fontspring-DEMO-theseasons-reg.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "The Seasons";
+  src: url("/fonts/The_Seasons/Fontspring-DEMO-theseasons-bd.otf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}

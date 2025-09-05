@@ -8,10 +8,6 @@ import {
 } from "react-icons/fa";
 
 const HomePage = () => {
-  // URL logo dummy (dari Logoipsum)
-  const dummyLogo =
-    "data:image/svg+xml,%3csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='50' cy='50' r='50' fill='white'/%3e%3cpath d='M25 70L50 30L75 70L62.5 50L50 70L37.5 50L25 70Z' fill='%23EF4444'/%3e%3c/svg%3e";
-
   return (
     <div
       id="home"
@@ -23,20 +19,19 @@ const HomePage = () => {
 
       {/* Konten Utama */}
       <div className="relative z-10 flex flex-col items-center text-center text-white">
-        {/* Logo */}
-        <img
-          src={dummyLogo}
-          alt="Logo"
-          className="w-20 h-20 mb-6 bg-white rounded-full p-2" // Menambahkan background putih agar logo SVG terlihat
-        />
-
         {/* Nama */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-wider uppercase">
-          Annisa Shyfa Safana
+        <h1
+          className="text-5xl md:text-5xl font-bold tracking-wider"
+          style={{ fontFamily: "The Seasons, serif" }}
+        >
+          Hello, this is Annisa Shyfa Safana Portofolio
         </h1>
 
         {/* Jabatan */}
-        <p className="mt-4 text-lg md:text-xl font-light tracking-widest uppercase">
+        <p
+          className="mt-4 text-lg md:text-xl font-light tracking-widest uppercase"
+          style={{ fontFamily: "Times New Roman" }}
+        >
           Desainer Mode + Perancang Busana + Desainer Kriya + Ilustrasi Fashion
           + Fotografer
         </p>

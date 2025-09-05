@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 // URL gambar profil dummy
-const profileImage = "/images/me.jpeg";
+const profileImage = "/images/me.jpg";
 
 const AboutMe = () => {
   const hobbies = [
