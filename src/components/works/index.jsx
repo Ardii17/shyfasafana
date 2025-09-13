@@ -143,7 +143,11 @@ const MyWorks = () => {
                   <div className="absolute inset-0 bg-pink-500 bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 text-center p-2">
                     <FaPlus className="text-4xl mb-2" />
                     <h3 className="text-xl font-bold capitalize">
-                      {item.title.replace(/[-_]/g, " ")}
+                      {item.title
+                        .replace(/[-_]/g, " ") // ganti - dan _ jadi spasi
+                        .split(" ") // pisah berdasarkan spasi
+                        .slice(0, 2) // ambil 2 kata pertama
+                        .join(" ")}{" "}
                     </h3>
                     <p className="text-sm">{item.category}</p>
                   </div>
