@@ -26,7 +26,7 @@ const milestoneData = [
   { icon: <FaTrophy />, count: 21, label: "Pengalaman" }, // ikon prestasi
   { icon: <FaCamera />, count: 15, label: "Fotografi" }, // ikon kamera
   { icon: <FaPalette />, count: 48, label: "Ilustrasi Fashion" }, // ikon palet warna
-  { icon: <FaCertificate />, count: 9, label: "Sertifikat" }, // ikon sertifikat
+  { icon: <FaCertificate />, count: 10, label: "Sertifikat" }, // ikon sertifikat
 ];
 
 const Milestones = () => {

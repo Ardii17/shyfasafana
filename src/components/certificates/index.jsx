@@ -3,6 +3,13 @@ import React, { useState } from "react";
 // (Data array 'certificatesData' tidak berubah, tetap sama)
 const certificatesData = [
   {
+    title: "Surat Keterangan Lulus Sarjana",
+    subtitle:
+      "Issued by Universitas Muhammadiyah Bandung (UMB) • Kriya Tekstil & Fashion",
+    date: "Juni 2024",
+    image: "./images/certificates/skl.jpg",
+  },
+  {
     title: "Sertifikat Kompetensi Pembatik Tulis",
     subtitle:
       "Issued by Badan Nasional Sertifikasi Profesi (BNSP) • Industri Batik",
