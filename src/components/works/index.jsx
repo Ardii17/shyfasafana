@@ -197,9 +197,6 @@ const MyWorks = () => {
               className="w-full h-full object-contain max-h-[85vh]"
             />
             <div className="text-center mt-2 p-2 bg-gray-100 rounded-b-lg">
-              <h3 className="text-lg font-bold text-gray-800 capitalize">
-                {selectedImage.title.replace(/[-_]/g, " ")}
-              </h3>
               <p className="text-sm text-gray-600">{selectedImage.category}</p>
             </div>
           </div>
