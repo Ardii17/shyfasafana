@@ -12,6 +12,33 @@ const categories = [
   "Design Manual",
 ];
 
+const moreDesignDigitalImage = [
+  {
+    id: 1,
+    title: "Party Skirt",
+    category: "Design Digital",
+    image: "/images/design_digital/party skirt 1.jpg",
+  },
+  {
+    id: 2,
+    title: "Party Skirt",
+    category: "Design Digital",
+    image: "/images/design_digital/party skirt 2.jpg",
+  },
+  {
+    id: 3,
+    title: "Long Skirt",
+    category: "Design Digital",
+    image: "/images/design_digital/long skirt 1.jpg",
+  },
+  {
+    id: 4,
+    title: "Long Skirt",
+    category: "Design Digital",
+    image: "/images/design_digital/long skirt 2.jpg",
+  },
+];
+
 const moreIlustrasiFashionImage = [
   {
     id: 1,
@@ -228,6 +255,10 @@ const MyWorks = () => {
         // --- PERUBAHAN DIMULAI DI SINI ---
         // Jika kategori saat ini adalah "Ilustrasi Fashion",
         // gabungkan data lokal (moreIlustrasiFashionImage) di bagian depan.
+        if (category === "Design Digital") {
+          return [...moreDesignDigitalImage, ...cloudinaryItems];
+        }
+
         if (category === "Analisis Tren Fashion") {
           return [...allAnalisisTrenFashionImage, ...cloudinaryItems];
         }
