@@ -12,6 +12,174 @@ const categories = [
   "Design Manual",
 ];
 
+const moreIlustrasiFashionImage = [
+  {
+    id: 1,
+    title: "Ilustrasi Fashion 1",
+    category: "Ilustrasi Fashion",
+    image: "/images/ilustrasi_fashion/Baju styling 1.jpeg",
+  },
+  {
+    id: 2,
+    title: "Ilustrasi Fashion 2",
+    category: "Ilustrasi Fashion",
+    image: "/images/ilustrasi_fashion/Baju styling 2.jpeg",
+  },
+  {
+    id: 3,
+    title: "Ilustrasi Fashion 3",
+    category: "Ilustrasi Fashion",
+    image: "/images/ilustrasi_fashion/Baju styling 3.jpeg",
+  },
+  {
+    id: 4,
+    title: "Ilustrasi Fashion 4",
+    category: "Ilustrasi Fashion",
+    image: "/images/ilustrasi_fashion/Baju styling 4.jpeg",
+  },
+  {
+    id: 5,
+    title: "Ilustrasi Fashion 5",
+    category: "Ilustrasi Fashion",
+    image: "/images/ilustrasi_fashion/Baju styling 5.jpeg",
+  },
+];
+
+const allAnalisisTrenFashionImage = [
+  {
+    id: 1,
+    title: "Analisis Tren Tokoh 1",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 1.jpg",
+  },
+  {
+    id: 2,
+    title: "Analisis Tren Tokoh 2",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 2.jpg",
+  },
+  {
+    id: 3,
+    title: "Analisis Tren Tokoh 3",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 3.jpg",
+  },
+  {
+    id: 4,
+    title: "Analisis Tren Tokoh 4",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 4.jpg",
+  },
+  {
+    id: 5,
+    title: "Analisis Tren Tokoh 5",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 5.jpg",
+  },
+  {
+    id: 6,
+    title: "Analisis Tren Tokoh 6",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 6.jpg",
+  },
+  {
+    id: 7,
+    title: "Analisis Tren Tokoh 7",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 7.jpg",
+  },
+  {
+    id: 8,
+    title: "Analisis Tren Tokoh 8",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 8.jpg",
+  },
+  {
+    id: 9,
+    title: "Analisis Tren Tokoh 9",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 9.jpg",
+  },
+  {
+    id: 10,
+    title: "Analisis Tren Tokoh 10",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 10.jpg",
+  },
+  {
+    id: 11,
+    title: "Analisis Tren Tokoh 11",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Analisis Tren Tokoh 11.jpg",
+  },
+  {
+    id: 111,
+    title: "Kriya Berkelanjutan 1",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 1.jpg",
+  },
+  {
+    id: 12,
+    title: "Kriya Berkelanjutan 2",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 2.jpg",
+  },
+  {
+    id: 13,
+    title: "Kriya Berkelanjutan 3",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 3.jpg",
+  },
+  {
+    id: 14,
+    title: "Kriya Berkelanjutan 4",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 4.jpg",
+  },
+  {
+    id: 15,
+    title: "Kriya Berkelanjutan 5",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 5.jpg",
+  },
+  {
+    id: 16,
+    title: "Kriya Berkelanjutan 6",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 6.jpg",
+  },
+  {
+    id: 17,
+    title: "Kriya Berkelanjutan 7",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 7.jpg",
+  },
+  {
+    id: 18,
+    title: "Kriya Berkelanjutan 8",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 8.jpg",
+  },
+  {
+    id: 19,
+    title: "Kriya Berkelanjutan 9",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 9.jpg",
+  },
+  {
+    id: 110,
+    title: "Kriya Berkelanjutan 10",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 10.jpg",
+  },
+  {
+    id: 111,
+    title: "Kriya Berkelanjutan 11",
+    category: "Analisis Tren Fashion",
+    image: "/images/analisis_fashion/Kriya Berkelanjutan 11.jpg",
+  },
+];
+
 const MyWorks = () => {
   const [activeFilter, setActiveFilter] = useState(categories[0]);
 
@@ -48,12 +216,29 @@ const MyWorks = () => {
           );
           return [];
         }
-        return result.map((item) => ({
+
+        // Format item dari Cloudinary
+        const cloudinaryItems = result.map((item) => ({
           id: item.public_id,
           title: item.public_id.split("/").pop(), // Ambil nama file sebagai title
           category: category,
           image: item.secure_url, // URL gambar dari Cloudinary
         }));
+
+        // --- PERUBAHAN DIMULAI DI SINI ---
+        // Jika kategori saat ini adalah "Ilustrasi Fashion",
+        // gabungkan data lokal (moreIlustrasiFashionImage) di bagian depan.
+        if (category === "Analisis Tren Fashion") {
+          return [...allAnalisisTrenFashionImage, ...cloudinaryItems];
+        }
+
+        if (category === "Ilustrasi Fashion") {
+          return [...moreIlustrasiFashionImage, ...cloudinaryItems];
+        }
+        // --- PERUBAHAN SELESAI DI SINI ---
+
+        // Jika bukan, kembalikan hanya data dari Cloudinary
+        return cloudinaryItems;
       });
 
       setAllPortfolioItems(formattedItems);
