@@ -18,8 +18,7 @@ const Quote = () => {
       <div className="relative container mx-auto px-6 py-28 text-white text-center">
         {/* Teks Kutipan */}
         <blockquote className="text-2xl md:text-4xl font-serif italic leading-relaxed tracking-wider max-w-4xl mx-auto">
-          "It's art if can't be explained. It's fashion if no one asks for an
-          explanation. It's design if it doesn't need explanation."
+          "Design is not just what it & feels like. Design is how it works"
         </blockquote>
 
         {/* Divider */}
@@ -27,7 +26,7 @@ const Quote = () => {
 
         {/* Penulis Kutipan */}
         <cite className="text-sm font-semibold tracking-widest uppercase not-italic">
-          Wouter Stokkel
+          Steve Jobs
         </cite>
       </div>
     </section>

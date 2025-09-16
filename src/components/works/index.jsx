@@ -125,13 +125,13 @@ const allAnalisisTrenFashionImage = [
     id: 9,
     title: "Analisis Tren Tokoh 9",
     category: "Analisis Tren Fashion",
-    image: "/images/analisis_fashion/Analisis Tren Tokoh 9.jpg",
+    image: "/images/analisis_fashion/Analisis tren Tokoh 9.jpg",
   },
   {
     id: 10,
     title: "Analisis Tren Tokoh 10",
     category: "Analisis Tren Fashion",
-    image: "/images/analisis_fashion/Analisis Tren Tokoh 10.jpg",
+    image: "/images/analisis_fashion/Analisis tren Tokoh 10.jpg",
   },
   {
     id: 11,
